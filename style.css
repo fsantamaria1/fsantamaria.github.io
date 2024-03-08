@@ -5,3 +5,9 @@ body {
 .card-body {
     background-color: #D9D9FF;
 }
+
+.card-body img {
+    display: block; 
+    margin: 0 auto; 
+    width: 50%;
+}
