@@ -11,3 +11,18 @@ body {
     margin: 0 auto; 
     width: 50%;
 }
+
+.social-links {
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-links > li {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.social-links img {
+    width: 25px;
+    height: 25px;
+}
