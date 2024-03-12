@@ -11,7 +11,7 @@
     /* Dark theme */
     --main-background-color: #333333;
     --main-text-color: #ffffff;
-    --card-background-color: #444444;
+    --card-background-color: #666666;
 }
 
 :root[data-theme='light'] {
