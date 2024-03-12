@@ -1,9 +1,16 @@
+:root {
+    --background-color: #E6E6FA;
+    --text-color: #333333;
+    --card-color: #D9D9FF;
+    --language-selection-color: 
+  }
+
 body {
-    background-color: #E6E6FA;
+    background-color: var(--background-color);
 }
 
 .card-body {
-    background-color: #D9D9FF;
+    background-color: var(--card-color);
     transition: 0.25s ease-in-out;
 }
 
