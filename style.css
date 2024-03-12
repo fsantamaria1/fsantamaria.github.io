@@ -115,10 +115,6 @@ body {
     background-color: var(--blue-btn);
 }
 
-
 .theme-selector {
-    position: absolute;
-    top: 15px;
-    left: 15px;
     z-index: 1000; /* Ensure it's above other content */
 }
