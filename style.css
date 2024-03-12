@@ -1,16 +1,27 @@
+/* Define color variables for each theme */
 :root {
-    --background-color: #E6E6FA;
-    --text-color: #333333;
-    --card-color: #D9D9FF;
-    --language-selection-color: 
+    /* Purple theme */
+    --purple-main: #E6E6FA;
+    --purple-text: #333333;
+    --purple-card: #D9D9FF;
+    /* Dark theme */
+    --dark-main: #333333;
+    --dark-text: #ffffff;
+    /* Light theme */
+    --light-main: #ffffff;
+    --light-text: #333333;
+    /* Blue theme */
+    --blue-main: #add8e6;
+    --blue-text: #333333;
   }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--purple-main);
+    color: var(--purple-text);
 }
 
 .card-body {
-    background-color: var(--card-color);
+    background-color: var(--purple-card);
     transition: 0.25s ease-in-out;
 }
 
@@ -56,4 +67,38 @@ body {
     font-size: 16px;
     outline: none;
     cursor: pointer;
+}
+
+.theme-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid gray;;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-theme {
+    background-color: var(--dark-main);
+}
+
+.light-theme {
+    background-color: var(--light-main);
+}
+
+.purple-theme {
+    background-color: var(--purple-theme-main);
+}
+
+.blue-theme {
+    background-color: var(--blue-main);
+}
+
+
+.theme-selector {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000; /* Ensure it's above other content */
 }
