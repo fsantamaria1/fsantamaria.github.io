@@ -14,7 +14,16 @@
     <div class="container mt-3 mb-5">
 
         <div class="row mb-4">
-            <div class="col-md-12 d-flex justify-content-end">
+
+            <div class="col-md-6 d-flex">
+                <div class="theme-selector">
+                    <button class="theme-btn dark-theme-btn" onclick="changeTheme('dark')"></button>
+                    <button class="theme-btn light-theme-btn" onclick="changeTheme('light')"></button>
+                    <button class="theme-btn purple-theme-btn" onclick="changeTheme('purple')"></button>
+                    <button class="theme-btn blue-theme-btn" onclick="changeTheme('blue')"></button>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
                 <div class="language-selection">
                     <select id="languageSelect" onchange="changeLanguage()">
                         <option value="en">English</option>
@@ -24,9 +33,9 @@
             </div>
         </div>
 
-        <div class="row mb-5">
+        <div class="row">
 
-            <div class="col-md-3">
+            <div class="col-md-3 mb-4">
                 <div class="card card-body border-info h-100">
                     <img 
                         src="./assets/images/fredy.jpg" 
@@ -38,7 +47,7 @@
                 </div>
             </div>
     
-            <div class="col-md-9">
+            <div class="col-md-9 mb-4">
                 <div class="card card-body border-info h-100">
                     <h4 id="myJourney"></h4>
                     <hr>
@@ -60,9 +69,9 @@
 
         </div>
 
-        <div class="row mb-5">
+        <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <div class="card card-body h-100">
                     <h5 id="myExperience"></h5>
                     <hr>
@@ -70,7 +79,7 @@
                 </div>
             </div>
             
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <div class="card card-body h-100">
                     <h5 id="whatIKnow"></h5>
                     <hr>
@@ -80,8 +89,8 @@
 
         </div>
 
-        <div class="row mb-5">
-            <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6 mb-4">
                 <div class="card card-body h-100">
                     <h5 id="myLearningApproach"></h5>
                     <hr>
@@ -89,7 +98,7 @@
                 </div>
             </div>
     
-            <div class="col-md-6">
+            <div class="col-md-6 mb-4">
                 <div class="card card-body h-100">
                     <h5 id="myShortTermGoals"></h5>
                     <hr>

@@ -1,9 +1,47 @@
+/* Define color variables for each color selector */
+:root {
+    --dark-btn: #333333;
+    --light-btn: #ffffff;
+    --purple-btn: #E6E6FA;
+    --blue-btn: #add8e6;
+  }
+
+  /* Define color variables for each theme */
+:root[data-theme='dark'] {
+    /* Dark theme */
+    --main-background-color: #333333;
+    --main-text-color: #ffffff;
+    --card-background-color: #666666;
+}
+
+:root[data-theme='light'] {
+    /* Light theme */
+    --main-background-color: #f2f2f2;
+    --main-text-color: #333333;
+    --card-background-color: #ffffff;
+}
+
+:root[data-theme='purple'] {
+    /* Purple theme */
+    --main-background-color: #E6E6FA;
+    --main-text-color: #333333;
+    --card-background-color: #D9D9FF;
+}
+
+:root[data-theme='blue'] {
+    /* Blue theme */
+    --main-background-color: #add8e6;
+    --main-text-color: #333333;
+    --card-background-color: #c7e6ff;
+}
+
 body {
-    background-color: #E6E6FA;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
 }
 
 .card-body {
-    background-color: #D9D9FF;
+    background-color: var(--card-background-color);
     transition: 0.25s ease-in-out;
 }
 
@@ -49,4 +87,38 @@ body {
     font-size: 16px;
     outline: none;
     cursor: pointer;
+}
+
+.theme-btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid gray;;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-theme-btn {
+    background-color: var(--dark-btn);
+}
+
+.light-theme-btn {
+    background-color: var(--light-btn);
+}
+
+.purple-theme-btn {
+    background-color: var(--purple-btn);
+}
+
+.blue-theme-btn {
+    background-color: var(--blue-btn);
+}
+
+
+.theme-selector {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1000; /* Ensure it's above other content */
 }
