@@ -13,6 +13,7 @@ function changeLanguage() {
             document.getElementById("myShortTermGoals").innerText = data.my_short_term_goals;
             // update the card contents with translations
             document.getElementById("myJourneyContent").innerHTML = data.my_journey_content;
+            document.getElementById("myExperienceContent").innerHTML = data.my_experience_content;
         })
         .catch(error => console.error('Error fetching translations:', error));
 }
