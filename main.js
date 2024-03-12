@@ -1,6 +1,12 @@
 function changeLanguage() {
     var selectedLanguage = document.getElementById("languageSelect").value;
-    fetch(`./translations/${selectedLanguage}.json`)
+    // Store the selected language in local storage
+    localStorage.setItem("selectedLanguage", selectedLanguage);
+    fetchLanguageContent(selectedLanguage);
+}
+
+function fetchLanguageContent(language) {
+    fetch(`./translations/${language}.json`)
         .then(response => response.json())
         .then(data => {
             // Update card titles with translations
@@ -22,5 +28,16 @@ function changeLanguage() {
         .catch(error => console.error('Error fetching translations:', error));
 }
 
-// Load initial translations
-changeLanguage();
+//check and load initial language preference
+function loadInitialLanguage() {
+    var storedLanguage = localStorage.getItem("selectedLanguage");
+    if (storedLanguage) {
+        document.getElementById("languageSelect").value = storedLanguage;
+        fetchLanguageContent(storedLanguage);
+    } else {
+        fetchLanguageContent("en")
+    }
+}
+
+// Load initial language preference
+loadInitialLanguage();
