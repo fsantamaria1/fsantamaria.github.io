@@ -15,6 +15,7 @@ function changeLanguage() {
             document.getElementById("myJourneyContent").innerHTML = data.my_journey_content;
             document.getElementById("myExperienceContent").innerHTML = data.my_experience_content;
             document.getElementById("whatIKnowContent").innerHTML = data.what_i_know_content;
+            document.getElementById("myLearningApproachContent").innerHTML = data.my_learning_approach_content;
         })
         .catch(error => console.error('Error fetching translations:', error));
 }
