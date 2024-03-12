@@ -1,27 +1,47 @@
-/* Define color variables for each theme */
+/* Define color variables for each color selector */
 :root {
-    /* Purple theme */
-    --purple-main: #E6E6FA;
-    --purple-text: #333333;
-    --purple-card: #D9D9FF;
-    /* Dark theme */
-    --dark-main: #333333;
-    --dark-text: #ffffff;
-    /* Light theme */
-    --light-main: #ffffff;
-    --light-text: #333333;
-    /* Blue theme */
-    --blue-main: #add8e6;
-    --blue-text: #333333;
+    --dark-btn: #333333;
+    --light-btn: #ffffff;
+    --purple-btn: #E6E6FA;
+    --blue-btn: #add8e6;
   }
 
+  /* Define color variables for each theme */
+:root[data-theme='dark'] {
+    /* Dark theme */
+    --main-background-color: #333333;
+    --main-text-color: #ffffff;
+    --card-background-color: #444444;
+}
+
+:root[data-theme='light'] {
+    /* Light theme */
+    --main-background-color: #ffffff;
+    --main-text-color: #333333;
+    --card-background-color: #f2f2f2;
+}
+
+:root[data-theme='purple'] {
+    /* Purple theme */
+    --main-background-color: #E6E6FA;
+    --main-text-color: #333333;
+    --card-background-color: #D9D9FF;
+}
+
+:root[data-theme='blue'] {
+    /* Blue theme */
+    --main-background-color: #add8e6;
+    --main-text-color: #333333;
+    --card-background-color: #c7e6ff;
+}
+
 body {
-    background-color: var(--purple-main);
-    color: var(--purple-text);
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
 }
 
 .card-body {
-    background-color: var(--purple-card);
+    background-color: var(--card-background-color);
     transition: 0.25s ease-in-out;
 }
 
@@ -79,20 +99,20 @@ body {
     transition: background-color 0.3s;
 }
 
-.dark-theme {
-    background-color: var(--dark-main);
+.dark-theme-btn {
+    background-color: var(--dark-btn);
 }
 
-.light-theme {
-    background-color: var(--light-main);
+.light-theme-btn {
+    background-color: var(--light-btn);
 }
 
-.purple-theme {
-    background-color: var(--purple-theme-main);
+.purple-theme-btn {
+    background-color: var(--purple-btn);
 }
 
-.blue-theme {
-    background-color: var(--blue-main);
+.blue-theme-btn {
+    background-color: var(--blue-btn);
 }
 
 

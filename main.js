@@ -41,3 +41,41 @@ function loadInitialLanguage() {
 
 // Load initial language preference
 loadInitialLanguage();
+
+// Function to change theme
+function changeTheme(theme) {
+    // Update CSS variables based on the selected theme
+    switch (theme) {
+        case 'dark':
+            document.documentElement.setAttribute('data-theme', 'dark');
+            break;
+        case 'light':
+            document.documentElement.setAttribute('data-theme', 'light');
+            break;
+        case 'purple':
+            document.documentElement.setAttribute('data-theme', 'purple');
+            break;
+        case 'blue':
+            document.documentElement.setAttribute('data-theme', 'blue');
+            break;
+        default:
+            break;
+    }
+
+    // Store the selected theme in local storage
+    localStorage.setItem("selectedTheme", theme);
+}
+
+// Function to check and load initial theme preference
+function loadInitialTheme() {
+    var storedTheme = localStorage.getItem("selectedTheme");
+    if (storedTheme) {
+        changeTheme(storedTheme);
+    } else {
+        // Default to the dark theme if no theme is stored
+        changeTheme("dark");
+    }
+}
+
+// Load initial theme preference
+loadInitialTheme();
