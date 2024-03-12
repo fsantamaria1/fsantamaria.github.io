@@ -14,6 +14,7 @@ function changeLanguage() {
             // update the card contents with translations
             document.getElementById("myJourneyContent").innerHTML = data.my_journey_content;
             document.getElementById("myExperienceContent").innerHTML = data.my_experience_content;
+            document.getElementById("whatIKnowContent").innerHTML = data.what_i_know_content;
         })
         .catch(error => console.error('Error fetching translations:', error));
 }
