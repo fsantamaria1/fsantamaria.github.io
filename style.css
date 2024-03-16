@@ -44,6 +44,8 @@ body {
 .card-body {
     background-color: var(--card-background-color);
     transition: 0.25s ease-in-out;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .card-body:hover {
